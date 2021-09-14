@@ -1,21 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,500;0,800;1,100&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: white;
+    transition: 0.3s ease-in-out;
+}
+body {
+    font-family: 'Alumni Sans', sans-serif;
 }
 a {
     text-decoration: none;
-    pointer-events: none;
 }
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #276FBF;
+    transition: 1s ease-in-out;
 }
 .logo img {
-    width: 5rem;
+    width: 3rem;
     background-color: #7495bb;
     border-radius: 100%;
     box-shadow: 5px 5px 20px rgb(94, 90, 90);
@@ -25,6 +30,7 @@ header {
     margin-bottom: 5px;
 }
 .title h1 {
+    font-weight: 800;
     text-shadow: 5px 5px 20px black;
 }
 fieldset{
@@ -35,9 +41,27 @@ fieldset{
     padding: 10px;    
     border: 2px dashed #AF5B5B;
 }
-fieldset input{
-    padding: 10px;
+fieldset input {
+    padding: 15px;
     margin: 10px;
+    transition: 0.3s ease-in-out;
+    font-size: 0.8em;
+    color: white;
+    background-color: #276FBF;
+    border: none;
+    border-radius: 3px;
+}
+fieldset input::placeholder {
+    color: rgba(255, 255, 255, 0.679);
+    font-size: 1.3em;
+}
+fieldset input:focus {
+    border: 2px solid #183059;
+    flex-grow: 2;
+    font-size: 0.8em;
+    font-weight: bolder;
+    color: white;
+    border: 1px solid black;
 }
 fieldset button.add  {
     padding: 7px;
@@ -46,9 +70,110 @@ fieldset button.add  {
     border: none;
     border-radius: 5px;
 }
-
 legend {
-    color: white;
-    font-size: 18pt;
-    text-shadow: 3px -1px 5px black;
+    color: #F03A47;
+    font-size: 1.6em;
+    letter-spacing: 2px;
+    text-shadow: 3px 1px 5px black;
+}
+ul {
+    list-style: none;
+    background-color: #F6F4F3;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px dashed #AF5B5B;
+}
+.container {
+    margin: 0 auto;
+    max-width: 95%;
+}
+ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(209, 202, 202);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 3px;
+}
+ul.empty {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul.empty p{
+    font-size: 2em;
+    text-align: center;
+    color: black;
+}
+ul li img, ul li p, button {
+    cursor: pointer;
+    transition: 0.8s ease;
+}
+img.check, img.check.checked, img.delete {
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+ul li p {
+    font-size: 1.4em;
+    color: black;
+    text-shadow: 1px 2px  1px white;
+    align-self: flex-start;
+    justify-self: center;
+    margin-top: 8px;
+    margin: 5px 5px;
+    padding: 10px;
+    flex: 2;
+}
+ul li:hover, ul li:focus {
+    background-color: #3c6da5;
+}
+ul li img:hover {
+    width: 26px;
+    box-shadow: 0px 0px 10px 2px rgb(94, 91, 91);
+}
+footer {
+    margin-top: 10px;
+    display: flex;
+    background-color:#276FBF;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+footer p {
+    font-size: 1.3em;
+    font-weight: 500;
+    text-shadow: 1px 2px 5px  white;
+    color: black;
+}
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+        min-height: 100px;
+    }
+    .logo img {
+        width: 4rem;
+        background-color: #7495bb;
+        border-radius: 3px;
+        box-shadow: 5px 5px 20px rgb(94, 90, 90);
+        margin-top: 10px;
+    }
+    .container {
+        max-width: 80%;
+    }
+    fieldset input {
+        max-width: 50%;
+    }
+    .container ul {
+        margin: 0 auto;
+        max-width: 60%;
+        min-height: 60vh;
+    }
+    fieldset input::placeholder {
+        color: #f03a46a3 ;
+        text-shadow: 1px 1px 1px rgb(220, 215, 215);
+        font-size: 1.3em;
+    }
 }
