@@ -8,11 +8,11 @@ Este repositorio foi criado para adicionar o projeto 01 desenvolvido no curso De
    <a href="https://www.linkedin.com/in/developer-danielmn/">
       <img alt="Daniel Meireles" src="https://img.shields.io/badge/-Daniel Meireles-0080000?style=flat&logo=Linkedin&logoColor=white" />
    </a>
-  <img alt="Repository size" src="https://img.shields.io/github/languages/code-size/meirelesdev/base-docker?color=0080000label=repo%20size">
+  <img alt="Repository size" src="https://img.shields.io/github/languages/code-size/meirelesdev/to-do-list-devinhouse?color=0080000label=repo%20size">
 
 
-  <a href="https://github.com/meirelesdev/base-docker/commits/main">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/meirelesdev/base-docker?color=0080000">
+  <a href="https://github.com/meirelesdev/to-do-list-devinhouse/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/meirelesdev/to-do-list-devinhouse?color=0080000">
 </p>
 
 # :pushpin: Índice
