@@ -6,6 +6,31 @@
     color: white;
     transition: 0.3s ease-in-out;
 }
+#alert {
+    margin: 10px auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 1.1em;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3ms all;
+}
+#alert.success {
+    display: flex;
+    background-color: rgb(44, 151, 66);
+    box-shadow: 1px 1px 20px 5px rgb(44, 151, 66);
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+#alert.error {
+    display: flex;
+    background-color: #F03A47;
+    box-shadow: 1px 1px 20px 5px #F03A47;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
 body {
     font-family: 'Alumni Sans', sans-serif;
 }
@@ -50,7 +75,9 @@ fieldset input {
     background-color: #276FBF;
     border: none;
     border-radius: 3px;
+    outline: none;
 }
+
 fieldset input::placeholder {
     color: rgba(255, 255, 255, 0.679);
     font-size: 1.3em;
@@ -62,6 +89,9 @@ fieldset input:focus {
     font-weight: bolder;
     color: white;
     border: 1px solid black;
+}
+fieldset input.cleared:focus {
+    border: 3px solid red !important;
 }
 fieldset button.add  {
     padding: 7px;
@@ -107,6 +137,10 @@ ul.empty p{
     text-align: center;
     color: black;
 }
+ul li p.done {
+    text-decoration: line-through;
+    color: rgb(84, 81, 81);
+}
 ul li img, ul li p, button {
     cursor: pointer;
     transition: 0.8s ease;
@@ -148,6 +182,10 @@ footer p {
     color: black;
 }
 @media (min-width: 768px) {
+    #alert {
+        width: 60%;
+        font-size: 1.5em;
+    }
     header {
         flex-direction: row;
         justify-content: space-around;

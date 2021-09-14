@@ -24,9 +24,10 @@
     <section>
         <div class="container">
             <form id="formToDo">
+                <div id="alert"></div>
                 <fieldset>
                     <legend>Adicione uma Tarefa</legend>
-                    <input type="text" placeholder="Adicione uma tarefa">
+                    <input type="text" id="task" placeholder="Adicione uma tarefa" autocomplete="off">
                     <button id="add" class="add">
                         <img src="assets/img/add.svg" alt="Adicionar">
                     </button>
@@ -36,9 +37,9 @@
     </section>
     <section>
         <div class="container">
-            <ul class="">
+            <ul class="" id="taskList">
                 <!-- <p>Você ainda nao adicionou nenhuma tarefa.</p> -->
-                <li>
+                <!-- <li>
                     <img class="check" src="assets/img/check.svg" alt="">
                     <p>Tarefa 1</p>
                     <img class="delete" src="assets/img/delete.svg" alt="">
@@ -57,13 +58,14 @@
                     <img class="check checked" src="assets/img/done.svg" alt="">
                     <p>Tarefa 1</p>
                     <img class="delete" src="assets/img/delete.svg" alt="">
-                </li>
+                </li> -->
             </ul>
         </div>
     </section>
     <footer>
         <p>Feito com ❤️ por Daniel Meireles</p>
     </footer>
+    <script src="assets/js/functions.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
