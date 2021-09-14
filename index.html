@@ -8,8 +8,50 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <h1>Lista de Tarefas</h1>
-    
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/img/logo.svg" alt="">
+            </a>
+        </div>
+        <div class="title">
+            <a href="index.html">
+                <h1>Lista de Tarefas</h1>
+            </a>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <form id="formToDo">
+                <fieldset>
+                    <legend>Adicione uma Tarefa</legend>
+                    <input type="text" placeholder="Adicione uma tarefa">
+                    <button id="add" class="add">
+                        <img src="assets/img/add_black_24dp.svg" alt="Adicionar">
+                    </button>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <ul>
+                <li>
+                    <img src="assets/img/done_black_24dp.svg" alt="">
+                    <p>Tarefa 1</p>
+                    <img src="assets/img/delete_black_24dp.svg" alt="">
+                </li>
+                <li>
+                    <img src="assets/img/done_black_24dp.svg" alt="">
+                    <p>Tarefa 1</p>
+                    <img src="assets/img/delete_black_24dp.svg" alt="">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p>Feito com ❤️ por Daniel Meireles</p>
+    </footer>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

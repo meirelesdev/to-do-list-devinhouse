@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+a {
+    text-decoration: none;
+    pointer-events: none;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #276FBF;
+}
+.logo img {
+    width: 5rem;
+    background-color: #7495bb;
+    border-radius: 100%;
+    box-shadow: 5px 5px 20px rgb(94, 90, 90);
+    margin-top: 10px;
+}
+.title {
+    margin-bottom: 5px;
+}
+.title h1 {
+    text-shadow: 5px 5px 20px black;
+}
+fieldset{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;    
+    border: 2px dashed #AF5B5B;
+}
+fieldset input{
+    padding: 10px;
+    margin: 10px;
+}
+fieldset button.add  {
+    padding: 7px;
+    background-color: green;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+legend {
+    color: white;
+    font-size: 18pt;
+    text-shadow: 3px -1px 5px black;
+}
