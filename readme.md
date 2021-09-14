@@ -19,8 +19,6 @@ Este repositorio foi criado para adicionar o projeto 01 desenvolvido no curso De
 
 - [Sobre](#sobre)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Como Usar](#como-usar)
-- [Como Contribuir](#como-contribuir)
 
 <a id="sobre"></a>
 
