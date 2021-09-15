@@ -7,8 +7,13 @@
     transition: 0.3s ease-in-out;
 }
 #alert {
-    margin: 10px auto;
+    position: fixed;
+    top: 50px;
+    right: 10px;
     display: none;
+    min-width: 300px;
+    max-width: 400px;
+    margin: 10px auto;
     justify-content: center;
     align-items: center;
     height: 50px;
@@ -145,9 +150,12 @@ ul li img, ul li p, button {
     cursor: pointer;
     transition: 0.8s ease;
 }
-img.check, img.check.checked, img.delete {
+img.check, img.check.checked, img.delete, img.edit {
     background-color: #ffffff;
     border-radius: 2px;
+}
+img.edit {
+    margin-right: 10px;
 }
 img.check:not(.ckecked) {
     border: 2px solid #008000;

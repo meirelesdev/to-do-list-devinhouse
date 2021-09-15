@@ -17,6 +17,7 @@ formTask.addEventListener('submit', function(event){
         inputTask.focus()
         return
     }
+    if(inputTask.getAttribute('editando')) inputTask.removeAttribute('editando')
     const task = {
         description: inputTask.value,
         isDone: false 
