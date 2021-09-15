@@ -19,6 +19,7 @@ Este repositorio foi criado para adicionar o projeto 01 desenvolvido no curso De
 
 - [Sobre](#sobre)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Imagens](#imagens)
 
 <a id="sobre"></a>
 
@@ -35,7 +36,16 @@ O projeto aqui disposto foi desenvolvido utilizando as seguintes tecnologias:
 - [HTML](https://www.w3schools.com/html/default.asp)
 - [CSS](https://www.w3schools.com/css/default.asp)
 - [JAVASCRIPT](https://www.w3schools.com/js/default.asp)
- 
+
+## :bookmark: Imagens 
+<p align="center">	
+
+Responsividade                     |                                           Alertas dinâmicos ao usuário
+:---------------------------------:|:---------------------------------------------------------------------:
+![Layout Responsivo](screenshot/screenshot_1.png?raw=true "Responsividade") | ![Layout Responsivo](screenshot/screenshot_2.png "Alertas dinâmicos ao usuário")
+### Layout Agradável
+![Layout Responsivo](screenshot/screenshot.png?raw=true "Layout Agradável")
+
 
 <h4 align="center">
     Feito com ❤️ by <a href="https://www.linkedin.com/in/developer-danielmn/" target="_blank">Daniel Meireles</a>
