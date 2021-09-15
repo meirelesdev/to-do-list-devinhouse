@@ -37,8 +37,7 @@ O projeto aqui disposto foi desenvolvido utilizando as seguintes tecnologias:
 - [CSS](https://www.w3schools.com/css/default.asp)
 - [JAVASCRIPT](https://www.w3schools.com/js/default.asp)
 
-## :bookmark: Imagens 
-<p align="center">	
+## :rocket: Imagens
 
 Responsividade                     |                                           Alertas dinâmicos ao usuário
 :---------------------------------:|:---------------------------------------------------------------------:
