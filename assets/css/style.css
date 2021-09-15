@@ -14,6 +14,7 @@
     min-width: 300px;
     max-width: 400px;
     margin: 10px auto;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 50px;
@@ -22,10 +23,33 @@
     border-radius: 10px;
     transition: 0.3ms all;
 }
+.barra {
+    align-self: flex-start;
+    position: relative;
+    margin: 0;
+    bottom: -5px;
+    border-radius: 10px 0px 0px 10px;
+    animation: border-progress;
+}
+.success .barra {
+    border-bottom: 8px solid rgb(1, 253, 94);
+}
+.error .barra {
+    border-bottom: 8px solid rgb(95, 95, 95);
+}
+@keyframes border-progress {
+    from { 
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+
+}
 #alert.success {
     display: flex;
     background-color: rgb(44, 151, 66);
-    box-shadow: 1px 1px 20px 5px rgb(44, 151, 66);
+    box-shadow: 1px 1px 3px 3px rgb(39, 102, 51);
     color: white;
     text-shadow: 1px 1px 5px black;
 }
@@ -74,26 +98,27 @@ fieldset{
 fieldset input {
     padding: 15px;
     margin: 10px;
-    transition: 0.3s ease-in-out;
     font-size: 0.8em;
     color: white;
-    background-color: #276FBF;
+    background-color: #4d82bf;
     border: none;
     border-radius: 3px;
     outline: none;
+    transition: 0.5s ease-in-out;
 }
 
-fieldset input::placeholder {
-    color: rgba(255, 255, 255, 0.679);
-    font-size: 1.3em;
-}
 fieldset input:focus {
-    border: 2px solid #183059;
+    /* border: 2px solid #183059; */
+    background-color: #1b6dca;
     flex-grow: 2;
     font-size: 0.8em;
     font-weight: bolder;
     color: white;
     border: 1px solid black;
+}
+fieldset input::placeholder {
+    color: rgba(255, 255, 255, 0.679);
+    font-size: 1.3em;
 }
 fieldset input.cleared:focus {
     border: 3px solid red !important;

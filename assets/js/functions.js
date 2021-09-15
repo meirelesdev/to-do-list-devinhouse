@@ -97,19 +97,23 @@ function deleteItem(id) {
     tasks.splice(id, 1)
     saveTasks(tasks)
     loadTasksToView(getTasks())
+    showAlert('Tarefa deletada com sucesso.', 'success', 3000)
 }
 /**
  * Função para marcar como concluido ou desmarcar, recebe a posição do item no array muda o atributo isDone e salva novamente.
  * @param {Number} id 
  */
 function markAsDone(id) {
+    
+    if(document.querySelector('.barra')) return
+
     const tasks = getTasks()
     if (tasks[id].isDone) {
         tasks[id].isDone = false
-        showAlert('Não Concluida.', 'success', 5000)
+        showAlert('Marcada como "Não Concluida".', 'success', 3000)
     } else {
         tasks[id].isDone = true
-        showAlert('Concluida.', 'success', 5000)
+        showAlert('Marcada como "Concluida".', 'success', 3000)
     }
     saveTasks(tasks)
     loadTasksToView(getTasks())
@@ -155,14 +159,28 @@ function saveTasks(tasks = []) {
  * @param {Number} time 
  */
 function showAlert(message, classMessage = 'success', time = 5000) {
+    
+    // para não sobrepor mensagens
+    if(document.querySelector('.barra')) return
+
     const divAlert = document.querySelector('#alert')
+    const progress = document.createElement('div')
+    const pMessage = document.createElement('p')
+    
+    progress.classList.add('barra')
+    progress.style = `animation-duration: ${(time / 1000) + 0.5 }s;`
     divAlert.classList.add(classMessage)
+
     if (message === '') {
         message = 'Erro: Algum erro ocorreu.'
     }
-    divAlert.innerHTML = message
+
+    pMessage.innerText = message
+    divAlert.appendChild(pMessage)
+    divAlert.appendChild(progress)
     setTimeout(function () {
-        divAlert.innerHTML = ''
+        console.log("Executou o settimeout")
         divAlert.classList.remove(classMessage)
+        divAlert.innerHTML = ''
     }, time)
 }

@@ -18,7 +18,7 @@ formTask.addEventListener('submit', function(event){
         isDone: false 
     }
     insertTask(task)
-    showAlert('Tarefa salva com Sucesso.')
+    showAlert('Tarefa salva com Sucesso.', 'success', 2000)
     inputTask.value = ''
     inputTask.focus()
     loadTasksToView(getTasks())
