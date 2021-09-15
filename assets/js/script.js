@@ -1,11 +1,6 @@
-// classe ul quando sem tarefas "empty"
-
 const tasks = getTasks();
-
 loadTasksToView(tasks)
-
 let formTask = document.querySelector('#formToDo')
-
 formTask.addEventListener('submit', function(event){
     event.preventDefault()
     const inputTask = document.querySelector('#task')
