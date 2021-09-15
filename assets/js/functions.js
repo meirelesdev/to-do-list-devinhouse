@@ -162,7 +162,7 @@ function showAlert(message, classMessage = 'success', time = 5000) {
     
     // para não sobrepor mensagens
     if(document.querySelector('.barra')) return
-
+    document.querySelector('.overlay').style.display = 'block'
     const divAlert = document.querySelector('#alert')
     const progress = document.createElement('div')
     const pMessage = document.createElement('p')
@@ -179,7 +179,7 @@ function showAlert(message, classMessage = 'success', time = 5000) {
     divAlert.appendChild(pMessage)
     divAlert.appendChild(progress)
     setTimeout(function () {
-        console.log("Executou o settimeout")
+        document.querySelector('.overlay').style.display = 'none'
         divAlert.classList.remove(classMessage)
         divAlert.innerHTML = ''
     }, time)

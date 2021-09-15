@@ -7,7 +7,7 @@ formTask.addEventListener('submit', function(event){
     inputTask.classList.contains('cleared')
     inputTask.classList.remove('cleared')
     if(!inputTask.value){
-        showAlert('Você não adicionou uma descrição.', 'error', 5000)
+        showAlert('Você não adicionou uma descrição.', 'error', 3000)
         inputTask.classList.add('cleared')
         inputTask.focus()
         return

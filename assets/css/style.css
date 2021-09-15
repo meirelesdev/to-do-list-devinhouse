@@ -6,11 +6,22 @@
     color: white;
     transition: 0.3s ease-in-out;
 }
+.overlay {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.261);
+    width: 100vw;
+    height: 100vh;
+    z-index: 990;
+}
 #alert {
     position: fixed;
+    z-index: 999;
     top: 50px;
     right: 10px;
-    display: none;
+    display: flex;
     min-width: 300px;
     max-width: 400px;
     margin: 10px auto;
