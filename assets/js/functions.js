@@ -87,6 +87,10 @@ function editarItem(id) {
  * @param {Number} id 
  * @returns 
  */
+function confirmExclusão(){
+    let alert = `<div class="overlay"></div>`
+    return 
+}
 function deleteItem(id) {
     if (document.querySelector('#task').getAttribute('editando')) {
         showAlert('Termine de editar o item antes de fazer outra ação.', 'error')
@@ -94,6 +98,9 @@ function deleteItem(id) {
         return
     }
     const tasks = getTasks()
+    if(!confirm(`Deseja realmente Excluir a tarefa "${tasks[id].description}"?`)) {
+        return
+    }
     tasks.splice(id, 1)
     saveTasks(tasks)
     loadTasksToView(getTasks())
