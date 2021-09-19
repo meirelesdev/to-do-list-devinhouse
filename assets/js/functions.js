@@ -40,7 +40,7 @@ function makeItem(item, i) {
     const imgItemDelete = createElementTasks('img', 'delete')
     const imgItemEditar = createElementTasks('img', 'edit')
 
-    imgItemDelete.setAttribute('onclick', `deleteItem(${i})`)
+    imgItemDelete.setAttribute('onclick', `confirmExclusão('${item.description}', ${i})`)
     imgItemDelete.setAttribute('title', 'Deletar Item')
     imgItemEditar.setAttribute('onclick', `editarItem(${i})`)
     imgItemEditar.setAttribute('title', 'Editar Item')
@@ -87,9 +87,31 @@ function editarItem(id) {
  * @param {Number} id 
  * @returns 
  */
-function confirmExclusão(){
-    let alert = `<div class="overlay"></div>`
-    return 
+function confirmExclusão(description, id){
+    let alert = `<div class="confirm">
+                <p>Deseja Realmente excluir a tarefa "${description}"?</p>
+                <div class="btns">
+                    <button id="cancel" onclick="return false">Cancelar</button>
+                    <button id="confirm" onclick="return true">Sim</button>
+                </div>
+            </div>`
+    let overlay = document.querySelector('.overlay')
+    overlay.style = 'display: flex;'
+    overlay.innerHTML = alert
+    let btnCancelar = document.querySelector('#cancel')
+    let btnConfirm = document.querySelector('#confirm')
+    btnCancelar.addEventListener('click', ()=>{
+        clearMensage(overlay)
+        return false
+    })
+    btnConfirm.addEventListener('click', ()=> {
+        clearMensage(overlay)
+        deleteItem(id)
+    })
+}
+function clearMensage(obj){
+    obj.style = 'display: none;'
+    obj.innerHTML = ''
 }
 function deleteItem(id) {
     if (document.querySelector('#task').getAttribute('editando')) {
@@ -98,9 +120,6 @@ function deleteItem(id) {
         return
     }
     const tasks = getTasks()
-    if(!confirm(`Deseja realmente Excluir a tarefa "${tasks[id].description}"?`)) {
-        return
-    }
     tasks.splice(id, 1)
     saveTasks(tasks)
     loadTasksToView(getTasks())
@@ -110,10 +129,8 @@ function deleteItem(id) {
  * Função para marcar como concluido ou desmarcar, recebe a posição do item no array muda o atributo isDone e salva novamente.
  * @param {Number} id 
  */
-function markAsDone(id) {
-    
+function markAsDone(id) {    
     if(document.querySelector('.barra')) return
-
     const tasks = getTasks()
     if (tasks[id].isDone) {
         tasks[id].isDone = false
@@ -165,11 +182,11 @@ function saveTasks(tasks = []) {
  * @param {string} classMessage 
  * @param {Number} time 
  */
-function showAlert(message, classMessage = 'success', time = 5000) {
-    
+
+function showAlert(message, classMessage = 'success', time = 5000) {    
     // para não sobrepor mensagens
     if(document.querySelector('.barra')) return
-    document.querySelector('.overlay').style.display = 'block'
+    document.querySelector('.overlay').style.display = 'flex'
     const divAlert = document.querySelector('#alert')
     const progress = document.createElement('div')
     const pMessage = document.createElement('p')
@@ -177,11 +194,9 @@ function showAlert(message, classMessage = 'success', time = 5000) {
     progress.classList.add('barra')
     progress.style = `animation-duration: ${(time / 1000) + 0.5 }s;`
     divAlert.classList.add(classMessage)
-
     if (message === '') {
         message = 'Erro: Algum erro ocorreu.'
     }
-
     pMessage.innerText = message
     divAlert.appendChild(pMessage)
     divAlert.appendChild(progress)

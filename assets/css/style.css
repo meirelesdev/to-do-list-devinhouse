@@ -9,12 +9,41 @@
 .overlay {
     position: absolute;
     display: none;
+    justify-content: center;
+    align-items: center;
     top: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.261);
     width: 100vw;
     height: 100vh;
     z-index: 990;
+}
+.overlay .confirm {
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+}
+.confirm #cancel {
+    background-color: red;
+    color: white;
+    border: 2px solid white;
+}
+.confirm #confirm {
+    background-color: green;
+    color: white;
+    border: 2px solid white;
+}
+.confirm button {
+    margin: 10px;
+    padding: 10px;
+    color: black;
+    text-shadow: 2px 2px 2px white;
+    outline: none;
 }
 #alert {
     position: fixed;
